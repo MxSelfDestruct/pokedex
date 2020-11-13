@@ -18,25 +18,25 @@ In order of importance...
 				$ pokedex bulbasaur
 				Pokemon name: 	Bulbasaur 
 				Pokedex ID: 	1 
-				Types: 			Grass, Poison 
-				HP: 			45
-				Attack: 		49
-				Defense: 		49
+				Types: 		Grass, Poison 
+				HP: 		45
+				Attack: 	49
+				Defense: 	49
 				Sp. Attack: 	65
 				Sp. Defense: 	65
-				Speed: 			45
+				Speed: 		45
 				$
 				
 				$ pokedex 004
 				Pokemon name: 	Charmander 
 				Pokedex ID: 	4 
-				Type: 			Fire 
-				HP: 			39
-				Attack: 		52
-				Defense: 		43
+				Type: 		Fire 
+				HP: 		39
+				Attack: 	52
+				Defense: 	43
 				Sp. Attack: 	60
 				Sp. Defense: 	50
-				Speed: 			43
+				Speed: 		43
 				$
 		
 		2: Contain all of the functionality of the re-designed dex from ShockSlayer's Crystal Clear mod (show base stats, evolutions, locations, et cetera)
