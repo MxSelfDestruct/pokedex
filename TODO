@@ -1,0 +1,47 @@
+To-do (for now)
+
+In order of importance...
+	Short term goals:
+		1: Finish pokedex.db! It should include *at least* the original 151 + MissingNo., but I want to shoot for the first 386. (Kanto + Johto + Hoenn)
+			1a: Use dex information from Pokemon Emerald Version.
+		
+		2: Include Pokedex blurbs in printouts.
+		
+		3: Rewrite the ReadIntStat function so that it can tell what stat to write to bas.ed on the contents of the Junk buffer.
+			3a: Once this is done, rename the Junk buffer.
+		
+		4: Move the file-scanning funtions to processing.c.
+		
+	Long term goals:
+		1: Instead of printing out info for literally every Pokemon in the dex, it should get the name or dex number of a pokemon from a command line argument
+			Example:
+				$ pokedex bulbasaur
+				Pokemon name: 	Bulbasaur 
+				Pokedex ID: 	1 
+				Types: 			Grass, Poison 
+				HP: 			45
+				Attack: 		49
+				Defense: 		49
+				Sp. Attack: 	65
+				Sp. Defense: 	65
+				Speed: 			45
+				$
+				
+				$ pokedex 004
+				Pokemon name: 	Charmander 
+				Pokedex ID: 	4 
+				Type: 			Fire 
+				HP: 			39
+				Attack: 		52
+				Defense: 		43
+				Sp. Attack: 	60
+				Sp. Defense: 	50
+				Speed: 			43
+				$
+		
+		2: Contain all of the functionality of the re-designed dex from ShockSlayer's Crystal Clear mod (show base stats, evolutions, locations, et cetera)
+		
+		3: Make installer script
+		
+		4: Make manpage
+				
