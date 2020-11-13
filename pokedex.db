@@ -1,0 +1,170 @@
+#Breakdown of how this formatting works
+#
+#pokemon:
+#	name	<Pokemon Name String>
+#	dexid	<Pokedex ID>
+#	type1	<Type 1 ID>
+#	type2	<Type 2 ID>
+#
+#	HP		<Base HP stat>
+#	ATK 	<Base Attack stat>
+#	DEF		<Base Defense stat>
+#	SPATK	<Base Sp. Attack stat>
+#	SPDEF	<Base Sp. Def stat>
+#	SPD		<Base Speed stat>
+#
+#	info	"Pokedex Blurb goes here"
+#
+#Remember to list Pokemon IN ORDER OF THEIR NATIONAL POKEDEX NUMBER!
+#
+#For quick reference, here's a quick guide for the IDs of all types
+#	00: NULL (For Pokemon that don't have a second type)
+#	01: Normal
+#	02: Fighting
+#	03: Flying
+#	04: Poison
+#	05: Ground
+#	06: Rock
+#	07: Bug
+#	08: Ghost
+#	09: Steel
+#	10: Fire
+#	11: Water
+#	12: Grass
+#	13: Electric
+#	14: Psychic
+#	15: Ice
+#	16: Dragon
+#	17: Dark
+#	18: ??? (Used for the move Curse)
+#	19: Bird (Used for MissingNo.)
+
+pokemon:
+	name	"MissingNo."
+	dexid	0
+	type1	19
+	type2	1
+	HP		33
+	ATK		136
+	DEF		0
+	SPATK	6
+	SPDEF	6
+	SPD		29
+	info	"コメント さくせいちゅう"
+	
+pokemon:
+	name	"Bulbasaur"
+	dexid	1
+	type1	12
+	type2	04
+	HP		45
+	ATK		49
+	DEF		49
+	SPATK	65
+	SPDEF	65
+	SPD		45
+	info	"BULBASAUR can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun’s rays, the seed grows progressively larger."
+
+pokemon:
+	name	"Ivysaur"
+	dexid	2
+	type1	12
+	type2	04
+	HP		60
+	ATK		62
+	DEF		63
+	SPATK	80
+	SPDEF	80
+	SPD		60
+	info	"To support its bulb, IVYSAUR’s legs grow sturdy. If it spends more time lying in the sunlight, the bud will soon bloom into a large flower."
+
+pokemon:
+	name	"Venusaur"
+	dexid	3
+	type1	12
+	type2	04
+	HP		80
+	ATK		82
+	DEF		83
+	SPATK	100
+	SPDEF	100
+	SPD		80
+	info	"VENUSAUR’s flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower’s aroma soothes the emotions of people."
+
+pokemon:
+	name	"Charmander"
+	dexid	4
+	type1	10
+	type2	00
+	HP		39
+	ATK		52
+	DEF		43
+	SPATK	60
+	SPDEF	50
+	SPD		43
+	info	"The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when CHARMANDER is happy, and blazes when it is enraged."
+
+pokemon:
+	name	"Charmeleon"
+	dexid	5
+	type1	10
+	type2	00
+	HP		58
+	ATK		64
+	DEF		58
+	SPATK	80
+	SPDEF	65
+	SPD		80
+	info	"Without pity, its sharp claws destroy foes. If it encounters a strong enemy, it becomes agitated, and the flame on its tail flares with a bluish white color."
+
+pokemon:
+	name	"Charizard"
+	dexid	6
+	type1	10
+	type2	03
+	HP		78
+	ATK		84
+	DEF		78
+	SPATK	109
+	SPDEF	85
+	SPD		100
+	info	"A CHARIZARD flies about in search of strong opponents. It breathes intense flames that can melt any material. However, it will never torch a weaker foe."
+
+pokemon:
+	name	"Squirtle"
+	dexid	7
+	type1	11
+	type2	00
+	HP		44
+	ATK		48
+	DEF		65
+	SPATK	50
+	SPDEF	64
+	SPD		43
+	info	"Its shell is not just for protection. Its rounded shape and the grooves on its surface minimize resistance in water, enabling SQUIRTLE to swim at high speeds."
+
+pokemon:
+	name	"Wartortle"
+	dexid	8
+	type1	11
+	type2	00
+	HP		59
+	ATK		63
+	DEF		80
+	SPATK	65
+	SPDEF	80
+	SPD		58
+	info	"Its large tail is covered with rich, thick fur that deepens in color with age. The scratches on its shell are evidence of this POKéMON’s toughness in battle."
+
+pokemon:
+	name	"Blastoise"
+	dexid	9
+	type1	11
+	type2	00
+	HP		79
+	ATK		83
+	DEF		100
+	SPATK	85
+	SPDEF	105
+	SPD		78
+	info	"The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet."
