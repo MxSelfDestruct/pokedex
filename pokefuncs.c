@@ -38,10 +38,16 @@ struct Pokemon {
 	int SPATK;
 	int SPDEF;
 	int SPD;
+	
+	//Pokedex blurb
+	char info[512];
 };
 
 //Creates a Pokemon struct based on arguments
-struct Pokemon MakePokemon(char name[10], int dex, int type1, int type2, int HP, int ATK, int DEF, int SPATK, int SPDEF, int SPD) {
+struct Pokemon MakePokemon(char name[10], int dex, int type1, int type2,
+						   int HP, int ATK, int DEF,
+						   int SPATK, int SPDEF, int SPD,
+						   char info[512]) {
 	struct Pokemon target;
 	
 	//Identifying info
@@ -57,6 +63,9 @@ struct Pokemon MakePokemon(char name[10], int dex, int type1, int type2, int HP,
 	target.SPATK = SPATK;
 	target.SPDEF = SPDEF;
 	target.SPD = SPD;
+	
+	//Pokedex blurb
+	strcpy(target.info, info);
 	
 	return target;
 }

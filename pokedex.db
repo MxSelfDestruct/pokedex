@@ -168,3 +168,42 @@ pokemon:
 	SPDEF	105
 	SPD		78
 	info	"The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet."
+	
+pokemon:
+	name	"Caterpie"
+	dexid	10
+	type1	07
+	type2	00
+	HP		45
+	ATK		30
+	DEF		35
+	SPATK	20
+	SPDEF	20
+	SPD		45
+	info	"Its voracious appetite compels it to devour leaves bigger than itself without hesitation. It releases a terribly strong odor from its antennae."
+	
+pokemon:
+	name	"Metapod"
+	dexid	11
+	type1	07
+	type2	00
+	HP		50
+	ATK		20
+	DEF		55
+	SPATK	25
+	SPDEF	25
+	SPD		30
+	info	"Its shell is as hard as an iron slab. A METAPOD does not move very much because it is preparing its soft innards for evolution inside the shell."
+	
+pokemon:
+	name	"Butterfree"
+	dexid	12
+	type1	07
+	type2	03
+	HP		60
+	ATK		45
+	DEF		50
+	SPATK	90
+	SPDEF	80
+	SPD		70
+	info	"It has a superior ability to search for delicious honey from flowers. It can seek, extract, and carry honey from flowers blooming over six miles away."
