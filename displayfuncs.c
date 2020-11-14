@@ -24,29 +24,51 @@
  */
 
 //Show a Pokemon's identifying information
-void ShowInfo(struct Pokemon target) {
-	printf("Pokemon name: \t%s \n", target.name);
-	printf("Pokedex ID: \t%d \n", target.dex);
+void ShowInfo(struct Pokemon Input) {
+	printf("Pokemon name: \t%s \n", Input.name);
+	printf("Pokedex ID: \t%d \n", Input.dex);
 	
 	//Check if the Pokemon has two types. If not, only print type1.
-	if (target.type2 == 0) {
-		printf("Type: \t\t%s \n", GetPokemonType(target.type1));
+	if (Input.type2 == 0) {
+		printf("Type: \t\t%s \n", GetPokemonType(Input.type1));
 	}
 	
 	//If it does, print both.
 	else {
-		printf("Types: \t\t%s, %s \n", GetPokemonType(target.type1),
-				GetPokemonType(target.type2));
+		printf("Types: \t\t%s, %s \n", GetPokemonType(Input.type1),
+				GetPokemonType(Input.type2));
 	}
 }
 
 //Show a Pokemon's stats
-void ShowStats(struct Pokemon target) {
-	printf("HP: \t\t%d\n", target.HP);
-	printf("Attack: \t%d\n", target.ATK);
-	printf("Defense: \t%d\n", target.DEF);
-	printf("Sp. Attack: \t%d\n", target.SPATK);
-	printf("Sp. Defense: \t%d\n", target.SPDEF);
-	printf("Speed: \t\t%d\n", target.SPD);
-	printf("\n");
+void ShowStats(struct Pokemon Input) {
+	printf("HP: \t\t%d\n", Input.HP);
+	printf("Attack: \t%d\n", Input.ATK);
+	printf("Defense: \t%d\n", Input.DEF);
+	printf("Sp. Attack: \t%d\n", Input.SPATK);
+	printf("Sp. Defense: \t%d\n", Input.SPDEF);
+	printf("Speed: \t\t%d\n", Input.SPD);
+}
+
+//Show a Pokemon's Pokedex blurb
+void ShowBlurb(struct Pokemon Input) {
+	//Tells this function when to put in a linebreak
+	int CharsRead = 0;
+	
+	//Prints out the blurb char by char
+	for (int i = 0; i < strlen(Input.info); i++) {
+		putchar(Input.info[i]);
+		CharsRead++;
+		
+		//After we print 60 chars, start looking for spaces
+		//Once we find one, insert a linebreak.
+		if (CharsRead >= 60) {
+			if (Input.info[i] == ' ') {
+				putchar('\n');
+				CharsRead = 0;
+			}
+		}
+	}
+	putchar('\n');
+	putchar('\n');
 }

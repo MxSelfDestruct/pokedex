@@ -84,6 +84,7 @@ int main() {
 						
 			//Identifying info
 			char name[10] = "";
+			ClearBuffer(name);
 			int dexid = 0;
 			int type1 = 0;
 			int type2 = 0;
@@ -96,11 +97,16 @@ int main() {
 			int SPDEF = 0;
 			int SPD = 0;
 			
+			//Pokedex blurb
+			char info[512] = "";
+			ClearBuffer(info);
+			
 			//Read in the next line to get the Pokemon's name
 			fgets(Buffer, sizeof(Buffer), PokedexDB);
 			//Get the name from quotation marks and strcpy it to name
 			strcpy(name, GetTextFromQuotes(Buffer));
 			
+			//Get numerical identifying info
 			dexid = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
 			type1 = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
@@ -108,6 +114,7 @@ int main() {
 			type2 = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
 			
+			//Get the numerical stats
 			HP = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
 			ATK = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
@@ -120,19 +127,27 @@ int main() {
 			ClearBuffer(Buffer);
 			SPD = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
+			
+			//Get Pokedex blurb
+			fgets(Buffer, sizeof(Buffer), PokedexDB);
+			//Get the blurb from quotation marks and strcpy it to info
+			strcpy(info, GetTextFromQuotes(Buffer));
+			ClearBuffer(Buffer);
 						
 			Pokedex[Pos] = MakePokemon(name, dexid, type1, type2,
 									   HP, ATK, DEF,
-									   SPATK, SPDEF, SPD);
+									   SPATK, SPDEF, SPD, info);
 			Pos++;
 		}
 	}
 	
 	fclose(PokedexDB);
 	
+	//Show all the Pokemon, except MissingNo.
 	for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
 		ShowInfo(Pokedex[i]);
 		ShowStats(Pokedex[i]);
+		ShowBlurb(Pokedex[i]);
 	}
 	
 	
