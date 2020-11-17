@@ -156,29 +156,49 @@ int main(int argc, char *argv[]) {
 	
 	fclose(PokedexDB);
 	
-	/*
-	//Show all the Pokemon, except MissingNo.
-	for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
-		ShowInfo(Pokedex[i]);
-		ShowStats(Pokedex[i]);
-		ShowBlurb(Pokedex[i]);
-	}
-	*/
+	//Figure out if the user gave us a name or a dexID
+		
+	//IMPORTANT: THIS NEEDS TO BE IMPROVED. IT WILL FAIL IF THE USER
+	//ENTERS "0" (MissingNo.'s ID) OR ENTERS A NAME WITH A NUMBER IN IT
+	//(Ex. Porygon2)
+	//Most likely, the oversight is in the GetIntFromString() function.
 	
-	//Look for a Pokemon with the name specified by the user
-	for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
-		if (strcmp(Pokedex[i].name, argv[1]) == 0) {
-			ShowInfo(Pokedex[i]);
-			ShowStats(Pokedex[i]);
-			ShowBlurb(Pokedex[i]);
-			
-			return 0;
+	//If GetIntFromString(argv[1]) evaluates to zero, assume it's a
+	//Pokemon's name
+	if (GetIntFromString(argv[1]) == 0) {	
+		for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
+			if (strcmp(Pokedex[i].name, argv[1]) == 0) {
+				ShowInfo(Pokedex[i]);
+				ShowStats(Pokedex[i]);
+				ShowBlurb(Pokedex[i]);
+				
+				return 0;
+			}
 		}
+			
+		//If there wasn't a Pokemon with that name, print this and exit
+		printf("No information for Pokemon \"%s.\"\n", argv[1]);
+		printf("Did you remember to capitalize it?\n");	
 	}
 	
-	//If there wasn't a Pokemon with that name, print this and exit
-	printf("No information for Pokemon \"%s.\"\n");
-	printf("Did you remember to capitalize it?\n", argv[1]);
-	
+	//Otherwise, assume it's a dexid.
+	else {
+		//Compute this once and store it in Target to save time
+		int Target = GetIntFromString(argv[1]);
+		printf("%d\n", Target);
+		for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
+			if (Pokedex[i].dex == Target) {
+				ShowInfo(Pokedex[i]);
+				ShowStats(Pokedex[i]);
+				ShowBlurb(Pokedex[i]);
+				
+				return 0;
+			}
+		}
+
+		//If there wasn't a Pokemon with that dexid, print this and exit
+		printf("No information for Pokemon with id \"%s.\"\n", argv[1]);
+	}
+
 	return 1;
 }
