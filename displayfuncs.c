@@ -60,9 +60,9 @@ void ShowBlurb(struct Pokemon Input) {
 		putchar(Input.info[i]);
 		CharsRead++;
 		
-		//After we print 60 chars, start looking for spaces
+		//After we print 40 chars, start looking for spaces
 		//Once we find one, insert a linebreak.
-		if (CharsRead >= 60) {
+		if (CharsRead >= 40) {
 			if (Input.info[i] == ' ') {
 				putchar('\n');
 				CharsRead = 0;

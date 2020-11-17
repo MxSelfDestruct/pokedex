@@ -30,11 +30,26 @@
 #include "pokefuncs.c"
 #include "displayfuncs.c"
 
-int main() {
-	//Initialize the buffer and blank it out, for safety
-	char Buffer[1024];
+int main(int argc, char *argv[]) {
+	//See if we have the right number of arguments
 	
-	//Blank out Buffer, for safety
+	//If we do, continue as normal.
+	if (argc == 2) {
+		;
+	}
+	
+	else if (argc > 2) {
+		printf("Too many arguments! (Expected 1 argument) Exiting...\n");
+		return 1;
+	}
+	
+	else {
+		printf("No arguments given! (Expected 1 argument) Exiting...\n");
+		return 1;
+	}
+	
+	//Initialize a buffer and blank it out, for safety
+	char Buffer[1024];
 	ClearBuffer(Buffer);
 	
 	int TotalPokemon = 0;
@@ -80,8 +95,6 @@ int main() {
 		//Detects if we hit a new Pokemon entry
 		if (strcmp(Buffer, "pokemon:\n") == 0) {
 			//Get ready to make a new Pokemon struct
-			//Use this to appease sscanf
-						
 			//Identifying info
 			char name[10] = "";
 			ClearBuffer(name);
@@ -143,13 +156,29 @@ int main() {
 	
 	fclose(PokedexDB);
 	
+	/*
 	//Show all the Pokemon, except MissingNo.
 	for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
 		ShowInfo(Pokedex[i]);
 		ShowStats(Pokedex[i]);
 		ShowBlurb(Pokedex[i]);
 	}
+	*/
 	
+	//Look for a Pokemon with the name specified by the user
+	for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
+		if (strcmp(Pokedex[i].name, argv[1]) == 0) {
+			ShowInfo(Pokedex[i]);
+			ShowStats(Pokedex[i]);
+			ShowBlurb(Pokedex[i]);
+			
+			return 0;
+		}
+	}
 	
-	return 0;
+	//If there wasn't a Pokemon with that name, print this and exit
+	printf("No information for Pokemon \"%s.\"\n");
+	printf("Did you remember to capitalize it?\n", argv[1]);
+	
+	return 1;
 }

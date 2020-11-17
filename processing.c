@@ -92,24 +92,37 @@ char * GetTextFromQuotes(char String[1024]) {
 	return ReturnString;
 }
 
+char * MakeStringLowercase(char String[1024]) {
+	//Initialize the return string
+	static char ReturnString[1024];
+	ClearBuffer(ReturnString);
+	
+	for (int i = 0; i < strlen(String); i++) {
+		if (String[i] >= 'A' && String[i] <= 'Z') {
+			ReturnString[i] = String[i] + 32;
+		}
+		
+		else {
+			ReturnString[i] = String[i];
+		}
+	}
+	
+	return ReturnString;
+}
+
 //Turns out I didn't need these functions at all, lol...
 //God damnit.
 char * StripWhitespace(char String[1024]) {
 	//Initialize the return string
 	static char ReturnString[1024];
-	
-	//Blank it out, for safety.
-	for (int i = 0; i < strlen(String); i++) {
-		ReturnString[i] = '\0';
-	}
+	ClearBuffer(ReturnString);
 	
 	//Position in the return string to write to
 	int Pos = 0;
 	
 	for (int i = 0; i < strlen(String); i++) {
 		//Check if the current character is a whitespace character
-		if (String[i] == ' ' || String[i] == '\n' ||
-			String[i] == '\t') {
+		if (String[i] == '\n' || String[i] == '\t') {
 			//If it is, we do nothing
 			continue;
 		}
@@ -127,11 +140,7 @@ char * StripWhitespace(char String[1024]) {
 int GetIntFromString(char String[1024]) {
 	//Initialize a string to hold any int characters we find
 	char IntsInString[1024];
-	
-	//Blank it out, just to be safe
-	for (int i = 0; i < strlen(String); i++) {
-		String[i] = '\0';
-	}
+	ClearBuffer(IntsInString);
 	
 	//Track the position that we write to in IntsInString
 	int Pos = 0;
