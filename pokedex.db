@@ -5,14 +5,12 @@
 #	dexid	<Pokedex ID>
 #	type1	<Type 1 ID>
 #	type2	<Type 2 ID>
-#
 #	HP		<Base HP stat>
 #	ATK 	<Base Attack stat>
 #	DEF		<Base Defense stat>
 #	SPATK	<Base Sp. Attack stat>
 #	SPDEF	<Base Sp. Def stat>
 #	SPD		<Base Speed stat>
-#
 #	info	"Pokedex Blurb goes here"
 #
 #Remember to list Pokemon IN ORDER OF THEIR NATIONAL POKEDEX NUMBER!
@@ -207,3 +205,211 @@ pokemon:
 	SPDEF	80
 	SPD		70
 	info	"It has a superior ability to search for delicious honey from flowers. It can seek, extract, and carry honey from flowers blooming over six miles away."
+
+pokemon:
+	name 	"Weedle"
+	dexid	13
+	type1	07
+	type2	04
+	HP		40
+	ATK		35
+	DEF		30
+	SPATK	20
+	SPDEF	30
+	SPD		50
+	info	"A Weedle has an extremely acute sense of smell. It distinguishes its favorite kinds of leaves from those it dislikes by sniffing with its big red proboscis (nose)."
+
+pokemon:
+	name 	"Kakuna"
+	dexid	14
+	type1	07
+	type2	04
+	HP		45
+	ATK		25
+	DEF		50
+	SPATK	25
+	SPDEF	35
+	SPD		35
+	info	"Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger."
+
+pokemon:
+	name 	"Beedrill"
+	dexid	15
+	type1	07
+	type2	04
+	HP		65
+	ATK		90
+	DEF		40
+	SPATK	45
+	SPDEF	80
+	SPD		75
+	info	"A Beedrill is extremely territorial. For safety reasons, no one should ever approach its nest. If angered, they will attack in a swarm."
+
+pokemon:
+	name 	"Pidgey"
+	dexid	16
+	type1	01
+	type2	03
+	HP		40
+	ATK		45
+	DEF		40
+	SPATK	35
+	SPDEF	35
+	SPD		56
+	info	"It has an extremely sharp sense of direction. It can unerringly return home to its nest, however far it may be removed from its familiar surroundings."
+
+pokemon:
+	name 	"Pidgeotto"
+	dexid	17
+	type1	01
+	type2	03
+	HP		63
+	ATK		60
+	DEF		55
+	SPATK	50
+	SPDEF	50
+	SPD		71
+	info	"This POKéMON flies around, patrolling its large territory. If its living space is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws."
+
+pokemon:
+	name 	"Pidgeot"
+	dexid	18
+	type1	01
+	type2	03
+	HP		83
+	ATK		80
+	DEF		75
+	SPATK	70
+	SPDEF	70
+	SPD		101
+	info	"This Pokémon has gorgeous, glossy feathers. Many trainers are so captivated by the beautiful feathers on its head that they choose Pidgeot as their Pokémon."
+
+pokemon:
+	name 	"Rattata"
+	dexid	19
+	type1	01
+	type2	00
+	HP		30
+	ATK		56
+	DEF		35
+	SPATK	25
+	SPDEF	35
+	SPD		72
+	info	"A Rattata is cautious in the extreme. Even while it is asleep, it constantly moves its ears and listens for danger. It will make its nest anywhere."
+
+pokemon:
+	name 	"Raticate"
+	dexid	20
+	type1	01
+	type2	00
+	HP		55
+	ATK		81
+	DEF		60
+	SPATK	50
+	SPDEF	70
+	SPD		97
+	info	"A Raticate’s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses."
+
+pokemon:
+	name 	"Spearow"
+	dexid	21
+	type1	01
+	type2	03
+	HP		40
+	ATK		60
+	DEF		30
+	SPATK	31
+	SPDEF	31
+	SPD		70
+	info	"Its loud cry can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger."
+
+pokemon:
+	name 	"Fearow"
+	dexid	22
+	type1	01
+	type2	03
+	HP		65
+	ATK		90
+	DEF		65
+	SPATK	61
+	SPDEF	61
+	SPD		100
+	info	"Its long neck and elongated beak are ideal for catching prey in soil or water. It deftly moves this extended and skinny beak to pluck prey."
+
+pokemon:
+	name 	"Ekans"
+	dexid	23
+	type1	04
+	type2	00
+	HP		35
+	ATK		60
+	DEF		44
+	SPATK	40
+	SPDEF	54
+	SPD		55
+	info	"An Ekans curls itself up in a spiral while it rests. This position allows it to quickly respond to an enemy from any direction with a threat from its upraised head."
+
+pokemon:
+	name 	"Arbok"
+	dexid	24
+	type1	04
+	type2	00
+	HP		60
+	ATK		95
+	DEF		69
+	SPATK	65
+	SPDEF	79
+	SPD		80
+	info	"This Pokémon has a terrifically strong constricting power. It can even flatten steel oil drums. Once it wraps its body around its foe, escaping is impossible."
+
+pokemon:
+	name 	"Pikachu"
+	dexid	25
+	type1	13
+	type2	00
+	HP		35
+	ATK		55
+	DEF		40
+	SPATK	50
+	SPDEF	50
+	SPD		90
+	info	"It stores electricity in the electric sacs on its cheeks. When it releases pent-up energy in a burst, the electric power is equal to a lightning bolt."
+
+pokemon:
+	name 	"Raichu"
+	dexid	26
+	type1	13
+	type2	00
+	HP		60
+	ATK		90
+	DEF		55
+	SPATK	90
+	SPDEF	80
+	SPD		110
+	info	"If it stores too much electricity, its behavior turns aggressive. To avoid this, it occasionally discharges excess energy and calms itself down."
+
+pokemon:
+	name 	"Sandshrew"
+	dexid	26
+	type1	05
+	type2	00
+	HP		50
+	ATK		75
+	DEF		85
+	SPATK	20
+	SPDEF	30
+	SPD		40
+	info	"When it curls up in a ball, it can make any attack bounce off harmlessly. Its hide has turned tough and solid as a result of living in the desert."
+
+pokemon:
+	name 	"Sandslash"
+	dexid	27
+	type1	05
+	type2	00
+	HP		75
+	ATK		100
+	DEF		110
+	SPATK	45
+	SPDEF	55
+	SPD		65
+	info	"It curls up in a ball to protect itself from enemy attacks. It also curls up to prevent heatstroke during the daytime when temperatures rise sharply."
