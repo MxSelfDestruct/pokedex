@@ -190,7 +190,6 @@ int main(int argc, char *argv[]) {
 	else {
 		//Compute this once and store it in Target to save time
 		int Target = GetIntFromString(argv[1]);
-		printf("%d\n", Target);
 		for (int i = 0; i < sizeof(Pokedex) / sizeof(Pokedex[0]); i++) {
 			if (Pokedex[i].dex == Target) {
 				ShowInfo(Pokedex[i]);
