@@ -7,9 +7,10 @@ In order of importance...
 			
 			DB status: 28/387
 		
-		2: Include Pokedex blurbs in printouts. (DONE!)
+		2: Include Pokedex blurbs in printouts.
+			(DONE!)
 		
-		3: Rewrite the ReadIntStat function so that it can tell what stat to write to bas.ed on the contents of the Junk buffer.
+		3: Rewrite the ReadIntStat function so that it can tell what stat to write to based on the contents of the Junk buffer.
 			3a: Once this is done, rename the Junk buffer.
 		
 		4: Move the file-scanning funtions to processing.c.
@@ -27,6 +28,11 @@ In order of importance...
 				Sp. Attack: 	65
 				Sp. Defense: 	65
 				Speed: 			45
+				BULBASAUR can be seen napping in bright 
+				sunlight. There is a seed on its back. By 
+				soaking up the sun’s rays, the seed grows 
+				progressively larger.
+
 				$
 				
 				$ pokedex 004
@@ -39,13 +45,19 @@ In order of importance...
 				Sp. Attack: 	60
 				Sp. Defense: 	50
 				Speed: 			43
+				The flame that burns at the tip of its tail 
+				is an indication of its emotions. The flame 
+				wavers when CHARMANDER is happy, and blazes 
+				when it is enraged.
+				
 				$
 				
-			(Halfway there!)
+			(Almost there!)
 		
 		2: Contain all of the functionality of the re-designed dex from ShockSlayer's Crystal Clear mod (show base stats, evolutions, locations, et cetera)
 		
 		3: Make makefile and installer script
+			(Makefile has been made!)
 		
 		4: Make manpage
 				
