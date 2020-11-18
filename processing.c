@@ -110,7 +110,7 @@ char * MakeStringLowercase(char String[1024]) {
 	return ReturnString;
 }
 
-//Turns out I didn't need these functions at all, lol...
+//Turns out I didn't need this function
 //God damnit.
 char * StripWhitespace(char String[1024]) {
 	//Initialize the return string

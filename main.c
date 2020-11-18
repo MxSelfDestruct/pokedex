@@ -31,20 +31,17 @@
 #include "displayfuncs.c"
 
 int main(int argc, char *argv[]) {
-	//See if we have the right number of arguments
+	//See if we have at least one argument
 	
 	//If we do, continue as normal.
 	if (argc == 2) {
 		;
 	}
 	
-	else if (argc > 2) {
-		printf("Too many arguments! (Expected 1 argument) Exiting...\n");
-		return 1;
-	}
-	
+	//If we have no args, quit out.	
 	else {
-		printf("No arguments given! (Expected 1 argument) Exiting...\n");
+		printf("No arguments given! (Expected exactly 1 argument.)\n");
+		printf("Exiting...\n");
 		return 1;
 	}
 	
@@ -84,7 +81,6 @@ int main(int argc, char *argv[]) {
 	rewind(PokedexDB);
 	
 	//Get data for all the Pokemon in PokedexDB
-	
 	int Pos = 0;
 	while (fgets(Buffer, sizeof(Buffer), PokedexDB) != NULL) {	
 		//Ignore comments and empty lines
@@ -120,25 +116,34 @@ int main(int argc, char *argv[]) {
 			strcpy(name, GetTextFromQuotes(Buffer));
 			
 			//Get numerical identifying info
-			dexid = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			dexid = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
-			type1 = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			type1 = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
-			type2 = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			type2 = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
 			
 			//Get the numerical stats
-			HP = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			HP = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
-			ATK = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			ATK = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
-			DEF = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			DEF = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
-			SPATK = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			SPATK = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
-			SPDEF = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			SPDEF = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
-			SPD = ReadIntStat(fgets(Buffer, sizeof(Buffer), PokedexDB));
+			SPD = ReadIntStat(fgets(Buffer,
+			sizeof(Buffer), PokedexDB));
 			ClearBuffer(Buffer);
 			
 			//Get Pokedex blurb
