@@ -19,15 +19,15 @@ In order of importance...
 		1: Instead of printing out info for literally every Pokemon in the dex, it should get the name or dex number of a pokemon from a command line argument.
 			Example:
 				$ pokedex bulbasaur
-				Pokemon name: 	Bulbasaur 
-				Pokedex ID: 	1 
-				Types: 			Grass, Poison 
-				HP: 			45
-				Attack: 		49
-				Defense: 		49
-				Sp. Attack: 	65
-				Sp. Defense: 	65
-				Speed: 			45
+				Pokemon name:   Bulbasaur 
+				Pokedex ID:     1 
+				Types:          Grass, Poison 
+				HP:             45
+				Attack:         49
+				Defense:        49
+				Sp. Attack:     65
+				Sp. Defense:    65
+				Speed:          45
 				BULBASAUR can be seen napping in bright 
 				sunlight. There is a seed on its back. By 
 				soaking up the sun’s rays, the seed grows 
@@ -38,13 +38,13 @@ In order of importance...
 				$ pokedex 004
 				Pokemon name: 	Charmander 
 				Pokedex ID: 	4 
-				Type: 			Fire 
-				HP: 			39
-				Attack: 		52
-				Defense: 		43
-				Sp. Attack: 	60
-				Sp. Defense: 	50
-				Speed: 			43
+				Type:           Fire 
+				HP:             39
+				Attack:         52
+				Defense:        43
+				Sp. Attack:     60
+				Sp. Defense:    50
+				Speed:          43
 				The flame that burns at the tip of its tail 
 				is an indication of its emotions. The flame 
 				wavers when CHARMANDER is happy, and blazes 
